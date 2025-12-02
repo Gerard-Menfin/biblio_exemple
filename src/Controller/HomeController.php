@@ -16,4 +16,10 @@ class HomeController extends AbstractController
             'livres' => $livreRepository->findAll(),
         ]);
     }
+
+    #[Route("/test", name:"app_home_test")]
+    public function test(): Response {
+        
+        return $this->render("home/test.html.twig"); 
+    }
 }
